@@ -4,18 +4,16 @@ from weapon import Weapon
 
 class Battlefield:
     def __init__(self):
-        self.robot = Robot("VX13", Weapon())
+        self.robot = Robot("VX13", Weapon("Sword", 25))
         self.dinosaur = Dinosaur("Shaq", 25)
     
 
     def run_game(self):
         while True:
-            if self.dinosaur.health >= 0:
-                self.dinosaur.attack(self.robot.health)
-                print("")
-            if self.robot.health >= 0:
-                self.robot.attack(self.dinosaur.health)
-                print("")
+            if self.dinosaur.health > 0:
+                self.dinosaur.attack(self.robot)
+            if self.robot.health > 0:
+                self.robot.attack(self.dinosaur)
             elif self.dinosaur.health <= 0:
                 print("The dinosaur's health has reached zero. The robot has won this battle!")
             elif self.robot.health <= 0:
