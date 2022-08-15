@@ -32,7 +32,10 @@ class Battlefield:
                 break
 
     def winner(self):
-        print(" ")
+        if self.dinosaur.health <= 0:
+            print(f"{self.dinosaur.name} health has been crushed. {self.robot.name} is victorious!")
+        elif self.robot.health <= 0:
+            print(f"{self.robot.name} health has been destroyed. {self.dinosaur.name} is vicotrious!")
 
 
 #pretty sure my run game is supposed to be the battle phase and the run game is supposed to encompass everything
