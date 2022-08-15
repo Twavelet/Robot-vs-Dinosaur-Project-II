@@ -12,11 +12,9 @@ class Battlefield:
         self.display_welcome()
         self.battle_phase()
 
-    
-
 
     def display_welcome(self):
-        print("Welcome to Fight Island! Enjoy the Show!")
+        print("Welcome to Fight Island! Enjoy the show!")
 
     def battle_phase(self):
         while True:
@@ -35,7 +33,4 @@ class Battlefield:
         if self.dinosaur.health <= 0:
             print(f"{self.dinosaur.name} health has been crushed. {self.robot.name} is victorious!")
         elif self.robot.health <= 0:
-            print(f"{self.robot.name} health has been destroyed. {self.dinosaur.name} is vicotrious!")
-
-
-#pretty sure my run game is supposed to be the battle phase and the run game is supposed to encompass everything
+            print(f"{self.robot.name} health has been destroyed. {self.dinosaur.name} is victorious!")
