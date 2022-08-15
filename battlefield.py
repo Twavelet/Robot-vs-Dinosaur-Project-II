@@ -9,8 +9,8 @@ class Battlefield:
     
 
     def run_game(self):
-        self.display_welcome
-        self.battle_phase
+        self.display_welcome()
+        self.battle_phase()
 
     
 
@@ -25,10 +25,10 @@ class Battlefield:
             if self.robot.health > 0:
                 self.robot.attack(self.dinosaur)
             elif self.dinosaur.health <= 0:
-                self.winner
+                self.winner()
                 break
             elif self.robot.health <= 0:
-                self.winner
+                self.winner()
                 break
 
     def winner(self):
