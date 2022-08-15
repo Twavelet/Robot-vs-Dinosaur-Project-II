@@ -1,6 +1,3 @@
-from ast import Pass
-from unicodedata import name
-
 
 class Dinosaur:
     def __init__(self, name, attack_power):
@@ -8,5 +5,5 @@ class Dinosaur:
         self.health = 100
         self.attack_power = attack_power
 
-    def attack(self):
-        pass
+    def attack(self, robot):
+        robot.health -= self.attack_power
